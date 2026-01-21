@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedro Vinicius - Desenvolvedor Unity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #18181b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            position: relative;
+            background-color: #18181b;
+        }
+
+        .profile-wrapper {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            border: 3px solid #6366f1;
+            object-fit: cover;
+        }
+
+        .status-badge {
+            position: absolute;
+            bottom: 15px;
+            right: 45px;
+            background-color: #22c55e;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            border: 3px solid #18181b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .status-badge::after {
+            content: '✓';
+            color: white;
+            font-weight: bold;
+        }
+
+        .greeting a {
+            font-size: 15px;
+            color: #a1a1aa;
+            margin-bottom: 15px;
+            text-decoration: none;
+        }
+
+        .greeting .name {
+            color: #ef4444;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            max-width: 850px;
+            color: #a1a1aa;
+            font-size: 18px;
+            margin-bottom: 45px;
+            line-height: 1.7;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .tech-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 28px;
+            background-color: #27272a;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .github-link
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 42px;
+            background-color: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .github-link:hover
+        {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .github-link a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .tech-badge:hover {
+            transform: translateY(-2px);
+        }
+
+        .tech-badge.github { 
+            background-color: #27272a;
+            color: #e5e5e7;
+        }
+        
+        .tech-badge.html { 
+            background-color: rgba(227, 76, 38, 0.15);
+            color: #fb923c;
+            border: 1px solid rgba(227, 76, 38, 0.3);
+        }
+        
+        .tech-badge.css { 
+            background-color: rgba(38, 77, 228, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(38, 77, 228, 0.3);
+        }
+        
+        .tech-badge.js { 
+            background-color: #fde047;
+            color: #000000;
+        }
+        
+        .tech-badge.react { 
+            background-color: rgba(97, 218, 251, 0.15);
+            color: #38bdf8;
+            border: 1px solid rgba(97, 218, 251, 0.3);
+        }
+        
+        .tech-badge.node { 
+            background-color: rgba(104, 160, 99, 0.15);
+            color: #84cc16;
+            border: 1px solid rgba(104, 160, 99, 0.3);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            font-size: 28px;
+            color: #a5a5ac;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(10px); }
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 100px 20px;
+            background-color: #09090b;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            color: #ef4444;
+            font-size: 18px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .project-card {
+            background-color: #18181b;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #27272a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            border-radius: 12px;
+            margin: 12px;
+            width: calc(100% - 24px);
+            height: 200px;
+        }
+
+
+        .project-card:nth-child(1) .project-img { 
+            background: url("Images/Gota Buddies Numbers.png");
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            width: calc(100% - 24px);
+        }
+        
+        .project-card:nth-child(2) .project-img { 
+            background: url("Images/Mitibiku.png");
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            width: calc(100% - 24px);
+        }
+        
+        .project-card:nth-child(3) .project-img { 
+            background: url("Images/Meu Joguinho.png");
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            width: calc(100% - 24px);
+        }
+        
+        .project-card:nth-child(4) .project-img { 
+            background: url("Images/Cozmos.png");
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            width: calc(100% - 24px);
+        }
+        
+        .project-card:nth-child(5) .project-img { 
+            background: url("Images/LiveOps Samples.png");
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            width: calc(100% - 24px);
+        }
+        
+        .project-card:nth-child(6) .project-img { 
+            background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+        }
+
+        .project-content {
+            padding: 20px 24px 28px;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: #a1a1aa;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 100px 20px;
+            background-color: #18181b;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .service-card {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: transparent;
+        }
+
+        .service-icon {
+            font-size: 56px;
+            margin-bottom: 24px;
+        }
+
+        .service-card:nth-child(1) .service-icon {
+            color: #a78bfa;
+        }
+
+        .service-card:nth-child(2) .service-icon {
+            color: #fbbf24;
+        }
+
+        .service-card:nth-child(3) .service-icon {
+            color: #60a5fa;
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .service-description {
+            color: #a1a1aa;
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 100px 20px;
+            text-align: center;
+            background-color: #09090b;
+        }
+
+        .contact-subtitle {
+            color: #a1a1aa;
+            font-size: 15px;
+            margin-top: 12px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 420px;
+            margin: 50px auto 0;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 22px;
+            background-color: #18181b;
+            border: 1px solid #27272a;
+            border-radius: 12px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 15px;
+        }
+
+        .contact-link:hover {
+            background-color: #27272a;
+            border-color: #3f3f46;
+            transform: translateX(4px);
+        }
+
+        .contact-link-content {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .contact-icon {
+            font-size: 18px;
+            width: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .arrow {
+            color: #52525b;
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-stack {
+                gap: 10px;
+            }
+
+            .tech-badge {
+                font-size: 12px;
+                padding: 8px 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="profile-wrapper">
+            <img src="https://ui-avatars.com/api/?name=Martina+Santos&background=6366f1&color=fff&size=200" alt="Martina Santos" class="profile-img">
+            <div class="status-badge"></div>
+        </div>
+        
+        <p class="greeting">
+            <div class="github-link">
+                <a href="https://github.com/Vinccius" target="_blank">Github</a>
+            </div>
+        </p>
+
+        <h1>Pedro Vinicius</h1>
+        
+        <p class="subtitle">
+            Sou programador de jogos com 8 anos de experiência prática em desenvolvimento de mecânicas e sistemas, otimização, remote config e infraestrutura em cloud para jogos em produção, lidando com updates frequentes, balanceamento e estabilidade em escala.
+        </p>
+        
+        <div class="tech-stack">
+            <div class="tech-badge js">
+                Unity
+            </div>
+            <div class="tech-badge js">
+                VFX
+            </div>
+            <div class="tech-badge js">
+                Firebase
+            </div>
+            <div class="tech-badge js">
+                Unity Game Services
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">⌄</div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Meu trabalho</p>
+                <h2 class="section-title">Veja meus projetos</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Gota Buddies: Numbers</h3>
+                        <p class="project-description">Gota Buddies é um jogo de brincadeira livre e criativa, desenvolvido para explorar a motivação extrínseca das crianças e introduzi-las à matemática.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Mitibiku</h3>
+                        <p class="project-description">Mitibiku é um jogo de plataforma 2D com mecânicas baseadas em física. O jogador deve unir as duas bolinhas utilizando sua criatividade, desviando dos obstáculos por meio de linhas desenhadas.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Meu Joguinho</h3>
+                        <p class="project-description">Meu Joguinho é um jogo educativo com a proposta de ensinar aos jogadores as primeiras noções de matemática através dos diversos minigames dentro de um mundo interativo.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Cozmos</h3>
+                        <p class="project-description">Este foi o primeiro projeto que eu trabalhei. Apresentamos esse projeto na BGS de 2018, com 4 fases diferentes feitas. Em cada fase os jogadores deveriam chegar até o final sem ser detectados pelos inimigos e sem esgotar seu suprimento limitado de oxigênio.</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-img"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">LiveOps Samples</h3>
+                        <p class="project-description">LiveOps Samples é um projeto pessoal feito com o objetivo de aplicar os recursos de Live Operations de forma prática dentro da Unity.</p>
+                    </div>
+                </div>                               
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Experiência</p>
+                <h2 class="section-title">Meu histórico de trabalho</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 class="service-title" style="margin: 0;">Programador de Jogos - Mage Studios</h3>
+                        <p class="service-description" style="margin: 0; white-space: nowrap; margin-left: 20px;">2022 - Presente</p>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 class="service-title" style="margin: 0;">Programador de Jogos - Sensorama</h3>
+                        <p class="service-description" style="margin: 0; white-space: nowrap; margin-left: 20px;">02/2021 - 07/2021</p>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 class="service-title" style="margin: 0;">Otimização de modelos 3D - Mushroom Arts</h3>
+                        <p class="service-description" style="margin: 0; white-space: nowrap; margin-left: 20px;">...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Contato</p>
+                <h2 class="section-title">Gostou do meu trabalho?</h2>
+                <p class="contact-subtitle">Entre em contato ou acompanhe as minhas redes sociais!</p>
+            </div>
+            
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/pedro-vinicius-9b60b9267/" class="contact-link">
+                    <div class="contact-link-content">
+                        <span class="contact-icon">in</span>
+                        <span>LinkedIn</span>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+                
+                <a href="https://www.instagram.com/viniccius.mm/" class="contact-link">
+                    <div class="contact-link-content">
+                        <span class="contact-icon">📷</span>
+                        <span>Instagram</span>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+                
+                <a href="https://www.youtube.com/@pedrovinimoreno99" class="contact-link">
+                    <div class="contact-link-content">
+                        <span class="contact-icon">⚙</span>
+                        <span>YouTube</span>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+                
+                <a href="https://x.com/oviniccius117" class="contact-link">
+                    <div class="contact-link-content">
+                        <span class="contact-icon">✉</span>
+                        <span>X - Twitter</span>
+                    </div>
+                    <span class="arrow">↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
