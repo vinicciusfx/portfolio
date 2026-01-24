@@ -132,6 +132,7 @@
             transition: all 0.2s;
             font-size: 18px;
             text-decoration: none;
+            margin-bottom: 25px;
         }
 
         .github-link:hover
@@ -141,6 +142,12 @@
         }
 
         .github-link a{
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-link {
+            display: block;
             text-decoration: none;
             color: inherit;
         }
@@ -258,7 +265,7 @@
         }
 
 
-        .project-card:nth-child(1) .project-img { 
+        .projects-grid > a:nth-child(1) .project-img { 
             background: url("Images/Gota Buddies Numbers.png");
             height: 220px;
             width: 100%;
@@ -267,7 +274,7 @@
             width: calc(100% - 24px);
         }
         
-        .project-card:nth-child(2) .project-img { 
+        .projects-grid > a:nth-child(2) .project-img {
             background: url("Images/Mitibiku.png");
             height: 220px;
             width: 100%;
@@ -276,7 +283,7 @@
             width: calc(100% - 24px);
         }
         
-        .project-card:nth-child(3) .project-img { 
+        .projects-grid > a:nth-child(3) .project-img {
             background: url("Images/Meu Joguinho.png");
             height: 220px;
             width: 100%;
@@ -285,7 +292,7 @@
             width: calc(100% - 24px);
         }
         
-        .project-card:nth-child(4) .project-img { 
+        .projects-grid > a:nth-child(4) .project-img {
             background: url("Images/Cozmos.png");
             height: 220px;
             width: 100%;
@@ -294,7 +301,7 @@
             width: calc(100% - 24px);
         }
         
-        .project-card:nth-child(5) .project-img { 
+        .projects-grid > a:nth-child(5) .project-img {
             background: url("Images/LiveOps Samples.png");
             height: 220px;
             width: 100%;
@@ -303,7 +310,7 @@
             width: calc(100% - 24px);
         }
         
-        .project-card:nth-child(6) .project-img { 
+        .projects-grid > a:nth-child(6) .project-img { 
             background: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
         }
 
@@ -473,10 +480,7 @@
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="profile-wrapper">
-            <img src="https://ui-avatars.com/api/?name=Martina+Santos&background=6366f1&color=fff&size=200" alt="Martina Santos" class="profile-img">
-            <div class="status-badge"></div>
-        </div>
+        <h1>Pedro Vinicius</h1>
         
         <p class="greeting">
             <div class="github-link">
@@ -484,8 +488,6 @@
             </div>
         </p>
 
-        <h1>Pedro Vinicius</h1>
-        
         <p class="subtitle">
             Sou programador de jogos com 8 anos de experiência prática em desenvolvimento de mecânicas e sistemas, otimização, remote config e infraestrutura em cloud para jogos em produção, lidando com updates frequentes, balanceamento e estabilidade em escala.
         </p>
@@ -510,55 +512,77 @@
 
     <!-- Projects Section -->
     <section class="projects">
-        <div class="container">
-            <div class="section-header">
-                <p class="section-label">Meu trabalho</p>
-                <h2 class="section-title">Veja meus projetos</h2>
-            </div>
-            
-            <div class="projects-grid">
+    <div class="container">
+        <div class="section-header">
+            <p class="section-label">Meu trabalho</p>
+            <h2 class="section-title">Veja meus projetos</h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <a href="gota_buddies_page.html" class="project-link">
                 <div class="project-card">
                     <div class="project-img"></div>
                     <div class="project-content">
                         <h3 class="project-title">Gota Buddies: Numbers</h3>
-                        <p class="project-description">Gota Buddies é um jogo de brincadeira livre e criativa, desenvolvido para explorar a motivação extrínseca das crianças e introduzi-las à matemática.</p>
+                        <p class="project-description">
+                            Gota Buddies é um jogo de brincadeira livre e criativa, desenvolvido para explorar a motivação extrínseca das crianças e introduzi-las à matemática.
+                        </p>
                     </div>
                 </div>
-                
+            </a>
+
+            <a href="mitibiku_page.html" class="project-link">
                 <div class="project-card">
                     <div class="project-img"></div>
                     <div class="project-content">
                         <h3 class="project-title">Mitibiku</h3>
-                        <p class="project-description">Mitibiku é um jogo de plataforma 2D com mecânicas baseadas em física. O jogador deve unir as duas bolinhas utilizando sua criatividade, desviando dos obstáculos por meio de linhas desenhadas.</p>
+                        <p class="project-description">
+                            Mitibiku é um jogo de plataforma 2D com mecânicas baseadas em física. O jogador deve unir as duas bolinhas utilizando sua criatividade, desviando dos obstáculos por meio de linhas desenhadas.
+                        </p>
                     </div>
                 </div>
-                
+            </a>
+
+            <a href="meu_joguinho_page.html" class="project-link">
                 <div class="project-card">
                     <div class="project-img"></div>
                     <div class="project-content">
                         <h3 class="project-title">Meu Joguinho</h3>
-                        <p class="project-description">Meu Joguinho é um jogo educativo com a proposta de ensinar aos jogadores as primeiras noções de matemática através dos diversos minigames dentro de um mundo interativo.</p>
+                        <p class="project-description">
+                            Meu Joguinho é um jogo educativo com a proposta de ensinar aos jogadores as primeiras noções de matemática através dos diversos minigames dentro de um mundo interativo.
+                        </p>
                     </div>
                 </div>
-                
+            </a>
+
+            <a href="cozmos_page.html" class="project-link">
                 <div class="project-card">
                     <div class="project-img"></div>
                     <div class="project-content">
                         <h3 class="project-title">Cozmos</h3>
-                        <p class="project-description">Este foi o primeiro projeto que eu trabalhei. Apresentamos esse projeto na BGS de 2018, com 4 fases diferentes feitas. Em cada fase os jogadores deveriam chegar até o final sem ser detectados pelos inimigos e sem esgotar seu suprimento limitado de oxigênio.</p>
+                        <p class="project-description">
+                            Este foi o primeiro projeto em que trabalhei. Apresentado na BGS 2018, o jogo conta com 4 fases onde o jogador deve avançar sem ser detectado pelos inimigos e sem esgotar seu suprimento limitado de oxigênio.
+                        </p>
                     </div>
                 </div>
-                
+            </a>
+
+            <a href="live_ops_samples_page.html" class="project-link">
                 <div class="project-card">
                     <div class="project-img"></div>
                     <div class="project-content">
                         <h3 class="project-title">LiveOps Samples</h3>
-                        <p class="project-description">LiveOps Samples é um projeto pessoal feito com o objetivo de aplicar os recursos de Live Operations de forma prática dentro da Unity.</p>
+                        <p class="project-description">
+                            LiveOps Samples é um projeto pessoal criado com o objetivo de aplicar, de forma prática, recursos de Live Operations dentro da Unity.
+                        </p>
                     </div>
-                </div>                               
-            </div>
+                </div>
+            </a>
+
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Services Section -->
     <section class="services">
@@ -623,7 +647,7 @@
                 
                 <a href="https://x.com/oviniccius117" class="contact-link">
                     <div class="contact-link-content">
-                        <span class="contact-icon">✉</span>
+                        <span class="contact-icon">X</span>
                         <span>X - Twitter</span>
                     </div>
                     <span class="arrow">↗</span>
