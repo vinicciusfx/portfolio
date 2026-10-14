@@ -94,7 +94,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
       {project.features.length > 0 || project.responsibilities.length > 0 ? (
         <section className="shell py-12 sm:py-16">
-          <div className="grid gap-8 xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
+          <div className={`grid gap-8 ${project.features.length > 0 && project.responsibilities.length > 0 ? "xl:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]" : ""}`}>
             {project.features.length > 0 ? (
               <div className="surface-card p-7 sm:p-8">
                 <SectionHeading

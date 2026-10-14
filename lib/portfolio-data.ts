@@ -94,15 +94,45 @@ export const projects: Project[] = [
       "Moody Madness é um jogo de corrida de kart multiplayer para até 8 jogadores, desenvolvido pela MAZE e construído na rede blockchain Abstract.",
     description:
       "Moody Madness é um jogo de corrida de kart multiplayer para até 8 jogadores, desenvolvido pela MAZE e construído na rede blockchain Abstract.",
-    tools: ["Unity", "LiveOps", "UI Engeneering", "Lighting"],
+    tools: ["Unity", "LiveOps", "UI Engineering", "Lighting"],
     palette: ["#6250ff", "#8af5dc"],
     cardImage: {
       src: "/projects/cards/moody-madness.png",
       alt: "Logo do jogo Moody Madness",
       fit: "contain",
     },
-    media: [],
-    features: [],
+    media: [
+      {
+        id: "moody-madness-home",
+        label: "Tela inicial",
+        src: "/projects/moody-madness/gallery/01-home.png",
+        alt: "Tela inicial de Moody Madness com kart, menus e Battle Pass",
+      },
+      {
+        id: "moody-madness-neon-track",
+        label: "Pista noturna",
+        src: "/projects/moody-madness/gallery/02-neon-track.png",
+        alt: "Pista noturna de Moody Madness com prédios e iluminação neon",
+      },
+      {
+        id: "moody-madness-sky-track",
+        label: "Pista nas nuvens",
+        src: "/projects/moody-madness/gallery/03-sky-track.png",
+        alt: "Vista da pista de Moody Madness suspensa entre as nuvens",
+      },
+      {
+        id: "moody-madness-pirate-track",
+        label: "Pista pirata",
+        src: "/projects/moody-madness/gallery/04-pirate-track.png",
+        alt: "Chegada da pista de Moody Madness com navio pirata e cenário tropical",
+      },
+    ],
+    features: [
+      "Refatoração completa da UI do projeto usando UI Toolkit, componentes modulares, escaláveis e integrados à arquitetura do projeto.",
+      "Otimização de materiais por meio da refatoração de shaders, tanto para modelos 3d, quanto para UI.",
+      "Atualização do sistema de iluminação em todo o projeto, refazendo a iluminação direta, indireta de todos os cenários do jogo utilizando os mais novos e modernos recursos da Unity 6, além de refazer todo o pós processamento dos cenários.",
+      "Atualização gráfica de todo o projeto através da criação de novos shaders que, aliado com a atualização do sistema de iluminação, melhorou drasticamente a experiência visual do projeto.",
+    ],
     responsibilities: [],
   },
   {
