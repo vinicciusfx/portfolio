@@ -87,6 +87,25 @@ export const projectCategories: Array<{ value: ProjectCategory; label: ProjectCa
 
 export const projects: Project[] = [
   {
+    slug: "moody-madness",
+    title: "Moody Madness",
+    category: "JOGOS PUBLICADOS",
+    shortDescription:
+      "Moody Madness é um jogo de corrida de kart multiplayer para até 8 jogadores, desenvolvido pela MAZE e construído na rede blockchain Abstract.",
+    description:
+      "Moody Madness é um jogo de corrida de kart multiplayer para até 8 jogadores, desenvolvido pela MAZE e construído na rede blockchain Abstract.",
+    tools: ["Unity", "LiveOps", "UI Engeneering", "Lighting"],
+    palette: ["#6250ff", "#8af5dc"],
+    cardImage: {
+      src: "/projects/cards/moody-madness.png",
+      alt: "Logo do jogo Moody Madness",
+      fit: "contain",
+    },
+    media: [],
+    features: [],
+    responsibilities: [],
+  },
+  {
     slug: "gota-buddies-numbers",
     title: "Gota Buddies: Numbers",
     category: "JOGOS PUBLICADOS",

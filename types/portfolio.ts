@@ -25,6 +25,7 @@ export type ProjectMedia = {
 export type ProjectCardImage = {
   src: string;
   alt: string;
+  fit?: "cover" | "contain";
 };
 
 export type ProjectLink = {
@@ -39,7 +40,7 @@ export type Project = {
   category: ProjectCategory;
   shortDescription: string;
   description: string;
-  externalLink: ProjectLink;
+  externalLink?: ProjectLink;
   tools: string[];
   palette: [string, string];
   cardImage?: ProjectCardImage;

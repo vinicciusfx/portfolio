@@ -19,7 +19,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
               src={withBasePath(project.cardImage.src)}
               alt={project.cardImage.alt}
               loading="lazy"
-              className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+              className={`absolute inset-0 h-full w-full transition duration-500 group-hover:scale-[1.03] ${project.cardImage.fit === "contain" ? "bg-black object-contain" : "object-cover"}`}
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,14,29,0.08),rgba(7,14,29,0.72))]" />
           </>
@@ -44,7 +44,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <div className="flex flex-1 flex-col p-6">
         <p className="text-base leading-7 text-muted">{project.shortDescription}</p>
         <div className="mt-6 flex flex-wrap gap-2">
-          {project.tools.slice(0, 3).map((tool) => (
+          {project.tools.map((tool) => (
             <span key={tool} className="pill border-line bg-accentSoft px-3 py-1 text-xs">
               {tool}
             </span>
