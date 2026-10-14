@@ -73,7 +73,6 @@ export default function HomePage() {
               >
                 <div className="text-lg font-semibold text-ink">{item.company}</div>
                 <div className="mt-1 text-sm text-muted">{item.role} · {item.period}</div>
-                <p className="mt-3 max-w-4xl text-base leading-7 text-muted">{item.description}</p>
               </li>
             ))}
           </ul>
