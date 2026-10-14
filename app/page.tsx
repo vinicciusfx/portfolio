@@ -4,7 +4,7 @@ import { ProjectsSection } from "@/components/projects-section";
 import { experienceItems, projects } from "@/lib/portfolio-data";
 import { withBasePath } from "@/lib/site-paths";
 
-const stackItems = ["Unity", "VFX", "Firebase", "Unity Game Services"];
+const stackItems = ["Unity", "VFX", "UI Engineering", "LiveOps", "Lighting", "Firebase"];
 
 export default function HomePage() {
   return (
@@ -26,7 +26,7 @@ export default function HomePage() {
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-muted sm:text-xl">
               Sou programador de jogos Unity e artista técnico com 8 anos de experiência prática
-              em desenvolvimento de mecânicas e sistemas, shaders, otimização, remote config e
+              em desenvolvimento de mecânicas e sistemas, shaders, UI, iluminação, otimização, remote config e
               infraestrutura em cloud para jogos em produção, lidando com updates frequentes,
               balanceamento e estabilidade em escala.
             </p>
