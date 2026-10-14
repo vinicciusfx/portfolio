@@ -63,19 +63,32 @@ export const heroFocusAreas: FocusArea[] = [
 
 export const experienceItems: ExperienceItem[] = [
   {
-    role: "Programador de Jogos",
+    role: "Programador",
+    company: "Heimo Game Studio",
+    period: "Mai 2026 - Out 2026",
+    description:
+      "Na Heimo Game Studio atuei como programador pleno, auxiliando a equipe na refatoração da UI, na programação de novas mecânicas do projeto e Live Operations. Após um tempo, assumi integralmente a parte de programação, UI, Live Operations e iluminação de cenários 3D.",
+  },
+  {
+    role: "Programador",
     company: "Conta Gota",
     period: "Jul 2023 - Jan 2026",
+    description:
+      "Além do desenvolvimento completo do jogo Gota Buddies (mecânicas, UI, VFX, SFX), também sou responsável por todo o sistema de live operation, implementando atualizações frequentes e gerenciando dados de 4000 jogadores mensais, integrando o projeto com o Firebase, permitindo uma visualização gráfica para os designers e também venda de produtos IAP.",
   },
   {
-    role: "Programador de Jogos",
-    company: "Mage Studio",
+    role: "Programador",
+    company: "Mage Studios",
     period: "Jan 2022 - Jan 2026",
+    description:
+      "Na Mage Studio trabalhei como desenvolvedor em diversos projetos, responsável pelo desenvolvimento de minigames, mecânicas, construção de UI, animação, implementação de efeitos sonoros/efeitos visuais e ferramentas internas com soluções específicas para cada cliente.",
   },
   {
-    role: "Programador de Jogos",
-    company: "Sensorama Tecnologia Educacional",
-    period: "Feb 2021 - Jul 2021",
+    role: "Programador",
+    company: "Sensorama",
+    period: "Fev 2021 - Jul 2021",
+    description:
+      "Atuei nesse projeto como programador júnior, auxiliando na programação de minigames 3D, mecânicas de exploração dos cenários e mecânicas de interação.",
   },
 ];
 

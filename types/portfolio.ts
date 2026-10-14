@@ -11,6 +11,7 @@ export type ExperienceItem = {
   role: string;
   company: string;
   period: string;
+  description: string;
 };
 
 export type ProjectCategory = "JOGOS PUBLICADOS" | "VFX" | "PROJETOS PESSOAIS";

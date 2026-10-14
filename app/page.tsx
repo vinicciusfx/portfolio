@@ -66,15 +66,16 @@ export default function HomePage() {
         <h2 className="text-2xl font-semibold text-ink sm:text-3xl">Experiência</h2>
         <div className="mt-8">
           <ul className="space-y-6">
-          {experienceItems.map((item) => (
-            <li
-              key={`${item.company}-${item.period}`}
-              className="border-b border-line pb-6 last:border-b-0 last:pb-0"
-            >
-              <div className="text-lg font-semibold text-ink">{item.company}</div>
-              <div className="mt-1 text-sm text-muted">{item.period}</div>
-            </li>
-          ))}
+            {experienceItems.map((item) => (
+              <li
+                key={`${item.company}-${item.period}`}
+                className="border-b border-line pb-6 last:border-b-0 last:pb-0"
+              >
+                <div className="text-lg font-semibold text-ink">{item.company}</div>
+                <div className="mt-1 text-sm text-muted">{item.role} · {item.period}</div>
+                <p className="mt-3 max-w-4xl text-base leading-7 text-muted">{item.description}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
