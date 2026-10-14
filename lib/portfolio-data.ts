@@ -133,7 +133,11 @@ export const projects: Project[] = [
       "Atualização do sistema de iluminação em todo o projeto, refazendo a iluminação direta, indireta de todos os cenários do jogo utilizando os mais novos e modernos recursos da Unity 6, além de refazer todo o pós processamento dos cenários.",
       "Atualização gráfica de todo o projeto através da criação de novos shaders que, aliado com a atualização do sistema de iluminação, melhorou drasticamente a experiência visual do projeto.",
     ],
-    responsibilities: [],
+    responsibilities: [
+      "Trabalhando nesse projeto tive a oportunidade de aprender muitas coisas novas e com as quais tive pouco ou nenhum contato. Entrei no projeto no meio do processo de refatoração de toda a interface do jogo, aprendendo em profundidade o funcionamento do UI Toolkit auxiliei na refatoração de todas as telas do jogo, criando componentes modulares e escaláveis, tornando as interfaces muito mais leves e fáceis de dar manutenção. A interface desse projeto é construída utilizando uma combinação de UI Toolkit + AppUI, seguindo uma arquitetura bem construída, de modo que agentes de inteligência artificial possam compreender, construir e alterar telas com autonomia.",
+      "O segundo grande trabalho que realizei nesse projeto foi a atualização gráfica, na parte de materiais e na parte de iluminação. Usando os novos recursos da Unity 6, reconstruí toda a iluminação de todos os cenários juntamente com os shaders e o pós processamento. Utilizando os novos Adaptive Light Probes, trabalhei em uma iluminação ambiente dinâmica e com uma melhor integração entre objetos estáticos e dinâmicos em todos os cenários.",
+      "Outra de minhas responsabilidades foi a parte de Live Operations, trabalhando com Addressables. O jogo periodicamente atualiza e lança novas seasons temáticas. Meu trabalho aqui é trabalhar em todas as etapas de cada nova atualização, atualizando banners, backgrounds, eventos seasonais, battle pass, recompensas, cenário tema da season, cenários e assets próprios de cada season, et cetera.",
+    ],
   },
   {
     slug: "gota-buddies-numbers",
